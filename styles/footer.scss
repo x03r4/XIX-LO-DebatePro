@@ -1,0 +1,33 @@
+@import "./variables";
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background-color: $white;
+  color: $blue;
+  h3 {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 6px;
+    font-size: 1em;
+    margin: 1.5em auto .5em;
+  }
+  img {
+    height: 5em;
+  }
+  p {
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin: 1em auto;
+    a {
+      color: $blue;
+      text-decoration: line-through;
+      font-weight: bolder;
+    }
+  }
+}

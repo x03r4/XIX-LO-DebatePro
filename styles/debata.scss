@@ -1,0 +1,517 @@
+@import "./variables";
+// .hideMe {
+  //   display: none;
+  // }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Montserrat", sans-serif;
+    background-color: $blue;
+    background-color: #02507a;
+    color: $white;
+  }
+  
+  // START SCREEN AND ENDING SCREEN
+  
+  .fader {
+    position: fixed;
+    background-color: $darkBlue;
+    background: linear-gradient(135deg, #0b2c3d 10%, #02507a 100%);
+    color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease-in-out;
+    z-index: 2;
+    p {
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .btn-enter {
+      width: 200px;
+      height: 40px;
+      border: 1px solid gold;
+      background-color: transparent;
+      color: $white;
+      cursor: pointer;
+    }
+  }
+  .hideMe {
+    transform: translate(-100%, 0);
+  }
+  .showMe {
+  transform: translate(100%, 0);
+}
+.endingPage {
+  position: fixed;
+  background-color: $darkBlue;
+  color: white;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease-in-out;
+  z-index: 1;
+}
+.showEnd {
+  transform: translate(-100%, 0);
+}
+
+// ----------------------------------------------------------------
+
+// EKRAN NR 1 - WPROWADZANIE DANYCH WEJŚCIOWYCH
+
+.prepare-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: -100%;
+  transition: all 1s ease-in-out;
+  text-transform: uppercase;
+  h2 {
+    font-size: 1.2em;
+    text-align: center;
+    color: goldenrod;
+  }
+  #thesis-input {
+    width: 90vw;
+    height: 30px;
+    margin: 5px auto 20px;
+  }
+  .competition-stage {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    h2 {
+      font-size: 1.2em;
+      margin: 0 0 0.5em 0;
+    }
+    form {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      label {
+        margin: 0 1em 0 0.2em;
+      }
+    }
+  }
+  .debate-data {
+    margin: 2em auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      text-align: center;
+      color: goldenrod;
+      //   border-bottom: 1px solid rgba(255, 255, 255, 0.226);
+    }
+    .details {
+      margin: 1em auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h4 {
+        font-size: 1.3em;
+      }
+      input {
+        height: 25px;
+      }
+      input:last-of-type {
+        margin: 0 0 3em 0;
+      }
+      p {
+        margin: 0.5em 0 0 0;
+      }
+    }
+    .proposition-data {
+      color: rgb(224, 224, 224);
+    }
+    .oposition-data {
+      color: rgb(224, 224, 224);
+    }
+  }
+}
+@media screen and (min-width: 700px) {
+  .prepare-data {
+    justify-content: space-evenly;
+    .debate-data {
+      .details-wrapper {
+        display: flex;
+        flex-direction: row;
+        .details {
+          margin: 1em 3em;
+        }
+      }
+    }
+  }
+}
+// ----------------------------------------------------------------
+
+// EKRAN NR 2 - RUNDY DEBATY I OCENA ZAWODNIKÓW
+
+.debate-rounds {
+  text-transform: uppercase;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: -100%;
+  transition: all 1s ease-in-out;
+  h2 {
+    margin: 0 1em;
+  }
+  .rounds {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    .round-header {
+      color: goldenrod;
+      margin: 3em 0 -1em 0em;
+    }
+    .round {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      .competitors {
+        display: flex;
+        .proposition_member {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 2em 0.5em;
+          h3 {
+            color: $gray;
+          }
+          h3,
+          h5,
+          h6 {
+            margin: 5px auto;
+          }
+          select {
+            width: 120px;
+            height: 30px;
+            text-align-last: center;
+            margin: 5px auto;
+          }
+        }
+        .oposition_member {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 2em 1em;
+          h3 {
+            color: $gray;
+          }
+          h3,
+          h5,
+          h6 {
+            margin: 5px auto;
+          }
+          select {
+            width: 120px;
+            height: 30px;
+            text-align-last: center;
+            margin: 5px auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .debate-rounds {
+    .rounds {
+      flex-direction: row;
+      .round {
+        margin: 0 10em;
+      }
+    }
+  }
+}
+
+// ----------------------------------------------------------------
+
+// EKRAN PRZYZNAWANIA PUNKTÓW DLA DRUZYN
+
+.summary-view {
+  text-transform: uppercase;
+
+  display: flex;
+  flex-direction: column;
+  //   justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: -100%;
+  transition: all 1s ease-in-out;
+  opacity: 0;
+  h2 {
+    text-align: center;
+  }
+  .rating {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    select,
+    input {
+      text-align-last: center;
+      margin-left: 1.2em;
+      height: 30px;
+      width: 100px;
+    }
+    .proposition {
+      margin: 2em auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+
+      h4 {
+        color: goldenrod;
+        text-align: center;
+        font-size: 1.4em;
+      }
+      .orator {
+        color: $gray;
+        input {
+          height: 30px;
+          width: 100px;
+          background-color: transparent;
+          text-align: center;
+          border: 1px solid white;
+          color: white;
+        }
+      }
+      .orator > * {
+        margin-left: 1em;
+      }
+      select {
+        margin-left: 1.2em;
+        height: 30px;
+        width: 100px;
+      }
+    }
+    .proposition > * {
+      margin-bottom: 10px;
+      width: 100%;
+      text-align: right;
+    }
+    .proposition button {
+      cursor: pointer;
+      margin: 5px;
+      width: 150px;
+      height: 40px;
+      border: none;
+      border: 1px solid $lightBlue;
+      border-radius: 2px;
+      background-color: transparent;
+      color: $white;
+      text-transform: uppercase;
+      padding: 0 1em;
+      text-align: center;
+    }
+    .oposition {
+      //   margin: 0.5em auto;
+      margin: 2em auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+
+      h4 {
+        color: goldenrod;
+        text-align: center;
+        font-size: 1.4em;
+      }
+      .orator > * {
+        margin-left: 1em;
+      }
+      select {
+        margin-left: 1.2em;
+        height: 30px;
+        width: 100px;
+      }
+      .orator {
+        color: $gray;
+        input {
+          height: 30px;
+          width: 100px;
+          background-color: transparent;
+          text-align: center;
+          border: 1px solid white;
+          color: white;
+        }
+      }
+    }
+    .oposition > * {
+      margin-bottom: 10px;
+      width: 100%;
+      text-align: right;
+    }
+    .oposition button {
+      cursor: pointer;
+      margin: 5px;
+      width: 150px;
+      height: 40px;
+      border: none;
+      border: 1px solid $lightBlue;
+      border-radius: 2px;
+      background-color: transparent;
+      color: $white;
+      text-transform: uppercase;
+      padding: 0 1em;
+      text-align: center;
+    }
+  }
+}
+@media screen and (min-width: 850px) {
+  .summary-view {
+    .rating {
+      flex-direction: row;
+      .oposition,
+      .position {
+        margin: 0 4em;
+      }
+    }
+  }
+}
+// ----------------------------------------------------------------
+
+// EKRAN NR 4 - PODSUMOWANIE DEBATY I EKRAN KOŃCOWY
+.ending-page {
+  text-transform:capitalize;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: -100%;
+  transition: all 1s ease-in-out;
+  background: linear-gradient(135deg, #0b2c3d 10%, #02507a 100%);
+  .ending-paragraph {
+    text-align: center; 
+    font-size: 1.2em;
+    line-height: 2em;
+  }
+  h1 {
+    font-size: 2em; 
+    color: lightgray; 
+    text-align: center;
+    background: -webkit-linear-gradient(70deg, rgb(204, 139, 0) 0%, rgb(255, 208, 0) 50%, rgb(230, 122, 0) 100%); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    // letter-spacing: 5px;
+    text-transform: initial;
+  }
+}
+
+// primary button
+.primary-btn {
+  min-width: 80px;
+  border: 1px solid gold;
+  border-radius: 3px;
+  background-color: transparent;
+  color: $white;
+  padding: 1em 4em;
+  margin: 2em 1em;
+  text-transform: uppercase;
+  cursor: pointer;
+
+}
+.control {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.second-btn {
+  cursor: pointer;
+  margin: 5px;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border: 1px solid $lightBlue;
+  border-radius: 2px;
+  background-color: transparent;
+  color: $white;
+  text-transform: uppercase;
+  padding: 0 auto;
+  cursor: pointer;
+
+}
+.accent-btn {
+  background-color: goldenrod;
+  border: none;
+  color: $darkBlue;
+  font-weight: 900;
+  letter-spacing: 5px;
+  font-size: 1em;
+  padding: 1em 2em;
+  width: 200px;
+  height: 60px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.exit-btn {
+  cursor: pointer;
+  color: goldenrod;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  transform: scale(2);
+}
+.back-btn {
+  cursor: pointer;
+  color: goldenrod;
+  position: absolute;
+  top: 3%;
+  left: 5%;
+  transform: scale(1.4);
+}
+.restart-btn {
+  cursor: pointer;
+  color: goldenrod;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  transform: scale(1.4);
+}

@@ -1,0 +1,847 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background-color: #f2f2f2;
+  color: #0071b0;
+}
+footer h3 {
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 6px;
+  font-size: 1em;
+  margin: 1.5em auto 0.5em;
+}
+footer img {
+  height: 5em;
+}
+footer p {
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin: 1em auto;
+}
+footer p a {
+  color: #0071b0;
+  text-decoration: line-through;
+  font-weight: bolder;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 10px -2px #0b2c3d6c;
+}
+nav ul {
+  width: 100%;
+  height: 7vh;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+}
+nav ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  margin: auto 0;
+}
+nav ul a {
+  display: flex;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: #f2f2f2;
+  padding: 5px 0;
+  font-size: 0.6em;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.active {
+  border-bottom: 1px solid #f2f2f2;
+  font-weight: 700;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3em auto;
+}
+.team .boss {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3em 0 3em 0;
+}
+.team .boss p {
+  text-align: center;
+  margin: 1em 0 0 0;
+  font-size: 1em;
+  letter-spacing: 2.5px;
+}
+.team .boss p span {
+  text-transform: uppercase;
+  color: #c4c4c4;
+  font-size: 0.8em;
+  letter-spacing: 2.5px;
+}
+.team .wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 0 5em;
+}
+.team .wrapper .membership {
+  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.team .wrapper .membership .member {
+  width: 100px;
+  margin: 20px;
+  font-size: 0.7em;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 1.5em;
+  text-align: center;
+  padding: 2em 0;
+  text-transform: uppercase;
+}
+.about-title span {
+  color: darkgray;
+}
+
+.banner {
+  background-image: url(/img/about-banner.png);
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+}
+
+.about-text {
+  background-color: #f2f2f2;
+  color: #0071b0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-text article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5em auto 0em;
+}
+.about-text article h2 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto;
+  font-size: 1.2em;
+  font-weight: 900;
+  letter-spacing: 6px;
+  margin: 0 0 1.5em;
+}
+.about-text article p {
+  padding: 0 1em;
+  text-align: justify;
+  line-height: 2em;
+}
+
+.graph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.graph img {
+  margin: 3em auto;
+  width: 80%;
+}
+
+.materials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.materials article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5em auto 0em;
+}
+.materials article h2 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto;
+  font-size: 1.2em;
+  font-weight: 900;
+  letter-spacing: 6px;
+  margin: 0 0 1.5em;
+}
+.materials article p {
+  padding: 0 1em;
+  text-align: justify;
+  line-height: 2em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #0071b0;
+  background-color: #02507a;
+  color: #f2f2f2;
+}
+
+.fader {
+  position: fixed;
+  background-color: #004a72;
+  background: linear-gradient(135deg, #0b2c3d 10%, #02507a 100%);
+  color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease-in-out;
+  z-index: 2;
+}
+.fader p {
+  text-align: center;
+  text-transform: uppercase;
+}
+.fader .btn-enter {
+  width: 200px;
+  height: 40px;
+  border: 1px solid gold;
+  background-color: transparent;
+  color: #f2f2f2;
+  cursor: pointer;
+}
+
+.hideMe {
+  transform: translate(-100%, 0);
+}
+
+.showMe {
+  transform: translate(100%, 0);
+}
+
+.endingPage {
+  position: fixed;
+  background-color: #004a72;
+  color: white;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease-in-out;
+  z-index: 1;
+}
+
+.showEnd {
+  transform: translate(-100%, 0);
+}
+
+.prepare-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: -100%;
+  transition: all 1s ease-in-out;
+  text-transform: uppercase;
+}
+.prepare-data h2 {
+  font-size: 1.2em;
+  text-align: center;
+  color: goldenrod;
+}
+.prepare-data #thesis-input {
+  width: 90vw;
+  height: 30px;
+  margin: 5px auto 20px;
+}
+.prepare-data .competition-stage {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+.prepare-data .competition-stage h2 {
+  font-size: 1.2em;
+  margin: 0 0 0.5em 0;
+}
+.prepare-data .competition-stage form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.prepare-data .competition-stage form label {
+  margin: 0 1em 0 0.2em;
+}
+.prepare-data .debate-data {
+  margin: 2em auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.prepare-data .debate-data h2 {
+  text-align: center;
+  color: goldenrod;
+}
+.prepare-data .debate-data .details {
+  margin: 1em auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.prepare-data .debate-data .details h4 {
+  font-size: 1.3em;
+}
+.prepare-data .debate-data .details input {
+  height: 25px;
+}
+.prepare-data .debate-data .details input:last-of-type {
+  margin: 0 0 3em 0;
+}
+.prepare-data .debate-data .details p {
+  margin: 0.5em 0 0 0;
+}
+.prepare-data .debate-data .proposition-data {
+  color: #e0e0e0;
+}
+.prepare-data .debate-data .oposition-data {
+  color: #e0e0e0;
+}
+
+@media screen and (min-width: 700px) {
+  .prepare-data {
+    justify-content: space-evenly;
+  }
+  .prepare-data .debate-data .details-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+  .prepare-data .debate-data .details-wrapper .details {
+    margin: 1em 3em;
+  }
+}
+.debate-rounds {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: -100%;
+  transition: all 1s ease-in-out;
+}
+.debate-rounds h2 {
+  margin: 0 1em;
+}
+.debate-rounds .rounds {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.debate-rounds .rounds .round-header {
+  color: goldenrod;
+  margin: 3em 0 -1em 0em;
+}
+.debate-rounds .rounds .round {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.debate-rounds .rounds .round .competitors {
+  display: flex;
+}
+.debate-rounds .rounds .round .competitors .proposition_member {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2em 0.5em;
+}
+.debate-rounds .rounds .round .competitors .proposition_member h3 {
+  color: #c4c4c4;
+}
+.debate-rounds .rounds .round .competitors .proposition_member h3,
+.debate-rounds .rounds .round .competitors .proposition_member h5,
+.debate-rounds .rounds .round .competitors .proposition_member h6 {
+  margin: 5px auto;
+}
+.debate-rounds .rounds .round .competitors .proposition_member select {
+  width: 120px;
+  height: 30px;
+  text-align-last: center;
+  margin: 5px auto;
+}
+.debate-rounds .rounds .round .competitors .oposition_member {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2em 1em;
+}
+.debate-rounds .rounds .round .competitors .oposition_member h3 {
+  color: #c4c4c4;
+}
+.debate-rounds .rounds .round .competitors .oposition_member h3,
+.debate-rounds .rounds .round .competitors .oposition_member h5,
+.debate-rounds .rounds .round .competitors .oposition_member h6 {
+  margin: 5px auto;
+}
+.debate-rounds .rounds .round .competitors .oposition_member select {
+  width: 120px;
+  height: 30px;
+  text-align-last: center;
+  margin: 5px auto;
+}
+
+@media screen and (min-width: 700px) {
+  .debate-rounds .rounds {
+    flex-direction: row;
+  }
+  .debate-rounds .rounds .round {
+    margin: 0 10em;
+  }
+}
+.summary-view {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: -100%;
+  transition: all 1s ease-in-out;
+  opacity: 0;
+}
+.summary-view h2 {
+  text-align: center;
+}
+.summary-view .rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.summary-view .rating select,
+.summary-view .rating input {
+  text-align-last: center;
+  margin-left: 1.2em;
+  height: 30px;
+  width: 100px;
+}
+.summary-view .rating .proposition {
+  margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.summary-view .rating .proposition h4 {
+  color: goldenrod;
+  text-align: center;
+  font-size: 1.4em;
+}
+.summary-view .rating .proposition .orator {
+  color: #c4c4c4;
+}
+.summary-view .rating .proposition .orator input {
+  height: 30px;
+  width: 100px;
+  background-color: transparent;
+  text-align: center;
+  border: 1px solid white;
+  color: white;
+}
+.summary-view .rating .proposition .orator > * {
+  margin-left: 1em;
+}
+.summary-view .rating .proposition select {
+  margin-left: 1.2em;
+  height: 30px;
+  width: 100px;
+}
+.summary-view .rating .proposition > * {
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: right;
+}
+.summary-view .rating .proposition button {
+  cursor: pointer;
+  margin: 5px;
+  width: 150px;
+  height: 40px;
+  border: none;
+  border: 1px solid #389ED7;
+  border-radius: 2px;
+  background-color: transparent;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  padding: 0 1em;
+  text-align: center;
+}
+.summary-view .rating .oposition {
+  margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.summary-view .rating .oposition h4 {
+  color: goldenrod;
+  text-align: center;
+  font-size: 1.4em;
+}
+.summary-view .rating .oposition .orator > * {
+  margin-left: 1em;
+}
+.summary-view .rating .oposition select {
+  margin-left: 1.2em;
+  height: 30px;
+  width: 100px;
+}
+.summary-view .rating .oposition .orator {
+  color: #c4c4c4;
+}
+.summary-view .rating .oposition .orator input {
+  height: 30px;
+  width: 100px;
+  background-color: transparent;
+  text-align: center;
+  border: 1px solid white;
+  color: white;
+}
+.summary-view .rating .oposition > * {
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: right;
+}
+.summary-view .rating .oposition button {
+  cursor: pointer;
+  margin: 5px;
+  width: 150px;
+  height: 40px;
+  border: none;
+  border: 1px solid #389ED7;
+  border-radius: 2px;
+  background-color: transparent;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  padding: 0 1em;
+  text-align: center;
+}
+
+@media screen and (min-width: 850px) {
+  .summary-view .rating {
+    flex-direction: row;
+  }
+  .summary-view .rating .oposition,
+.summary-view .rating .position {
+    margin: 0 4em;
+  }
+}
+.ending-page {
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: -100%;
+  transition: all 1s ease-in-out;
+  background: linear-gradient(135deg, #0b2c3d 10%, #02507a 100%);
+}
+.ending-page .ending-paragraph {
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 2em;
+}
+.ending-page h1 {
+  font-size: 2em;
+  color: lightgray;
+  text-align: center;
+  background: -webkit-linear-gradient(70deg, #cc8b00 0%, #ffd000 50%, #e67a00 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: initial;
+}
+
+.primary-btn {
+  min-width: 80px;
+  border: 1px solid gold;
+  border-radius: 3px;
+  background-color: transparent;
+  color: #f2f2f2;
+  padding: 1em 4em;
+  margin: 2em 1em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.control {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.second-btn {
+  cursor: pointer;
+  margin: 5px;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border: 1px solid #389ED7;
+  border-radius: 2px;
+  background-color: transparent;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  padding: 0 auto;
+  cursor: pointer;
+}
+
+.accent-btn {
+  background-color: goldenrod;
+  border: none;
+  color: #004a72;
+  font-weight: 900;
+  letter-spacing: 5px;
+  font-size: 1em;
+  padding: 1em 2em;
+  width: 200px;
+  height: 60px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.exit-btn {
+  cursor: pointer;
+  color: goldenrod;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  transform: scale(2);
+}
+
+.back-btn {
+  cursor: pointer;
+  color: goldenrod;
+  position: absolute;
+  top: 3%;
+  left: 5%;
+  transform: scale(1.4);
+}
+
+.restart-btn {
+  cursor: pointer;
+  color: goldenrod;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  transform: scale(1.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #0071b0;
+  background-color: #02507a;
+  color: #f2f2f2;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3em auto 5em;
+  text-transform: uppercase;
+}
+main img {
+  width: 15vh;
+  filter: brightness(80%);
+  margin: 0 0 1em 0;
+}
+main .title h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 900;
+  letter-spacing: 4px;
+  font-size: 2em;
+}
+main .title h1 span {
+  color: #c4c4c4;
+}
+main .subtitle {
+  padding: 1em 0 0 0;
+  margin: 3em auto;
+  border-top: 1px solid #c4c4c48a;
+  text-align: center;
+}
+main .subtitle h2 {
+  font-weight: 300;
+  letter-spacing: 8px;
+}
+main .subtitle h2 span {
+  letter-spacing: initial;
+}
+
+.new-season {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  color: #0071b0;
+  text-transform: uppercase;
+  padding: auto 2em;
+  letter-spacing: 4px;
+}
+.new-season h3 {
+  padding: 3em 1em;
+  font-weight: 900;
+  text-align: center;
+}
+.new-season p {
+  font-weight: 500;
+  padding: 0 0 3em;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.info article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3em auto;
+}
+.info article h2 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 3em auto 1em;
+  font-size: 1.2em;
+  font-weight: 900;
+  letter-spacing: 6px;
+}
+.info article p {
+  padding: 1em;
+  text-align: justify;
+  line-height: 2em;
+}
+
+.hall {
+  background-image: url(/img/hall.svg);
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  height: 200px;
+  margin: 4em 0 2em;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 10%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.scene_element {
+  animation-duration: 0.5s;
+  transition-timing-function: ease-in;
+  animation-fill-mode: both;
+}
+
+.scene_element--fadein {
+  animation-name: fadeIn;
+}
+
+.scene_element--fadeinup {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-delay: 0.15s;
+}
+
+.scene_element--fadeinup2 {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+}
+
+.scene_element--fadeinup3 {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-delay: 0.35s;
+}
+
+/*# sourceMappingURL=main.css.map */

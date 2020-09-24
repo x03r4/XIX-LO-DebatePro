@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b2c3d">
+
+    <link rel='shortcut icon' type='image/x-icon' href='./img/fav.svg' />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="https://kit.fontawesome.com/14cac0b5de.js" crossorigin="anonymous"></script>
+    <title>DEBATA Pro</title>
+</head>
+
+<body>
+
+    <!-- EKRAN NR 0  -->
+    <div class="fader scene_element scene_element--fadein">
+        <a class="exit-btn" href="./index.html"><i class="fas fa-times"></i></a>
+        <p>High school debate - Oxford style</p>
+        <h1
+            style="text-transform: initial; font-size: 4em; color: lightgray; text-align: center;background: -webkit-linear-gradient(70deg, rgb(204, 139, 0) 0%, rgb(255, 208, 0) 50%, rgb(230, 122, 0) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+            DEBATA Pro
+        </h1>
+
+        <br>
+        <button class="btn-enter" onclick="hideLoadScreen()">START</button>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- EKRAN NR 1 - WPROWADZANIE DANYCH WEJŚCIOWYCH -->
+    <section class="prepare-data">
+        <a href="#" class="back-btn"><i class="fas fa-reply"></i></a>
+        
+        <br><br>
+        <div class="thesis-name">
+            <h2>wprowadź tezę</h2>
+            <input type="text" name="thesis" id="thesis-input">
+        </div>
+
+
+        <div class="competition-stage">
+            <h2>wskaż etap rozgrywek</h2>
+            <form>
+                <input type="radio" name="competition-stage" value="pierwszym etapie" id="first-stage">
+                <label for="first-stage">1 Etap</label>
+
+                <input type="radio" name="competition-stage" value="drugim etapie" id="second-stage">
+                <label for="second-stage">2 Etap</label>
+
+                <input type="radio" name="competition-stage" value="półfinale" id="semi-final">
+                <label for="semi-final">Półfinał</label>
+
+                <input type="radio" name='competition-stage' value="finale" id="final">
+                <label for="final">Finał</label>
+            </form>
+        </div>
+
+
+        <section class="debate-data">
+            <h2>Wprowadź imiona zawodników</h2>
+            <div class="details-wrapper">
+                <div class="proposition-data details">
+                    <h4>propozycja</h4>
+                    <p>mówca 1</p><input type="text" name="oratorName1P" id="oratorName1P">
+                    <p>mówca 2</p><input type="text" name="oratorName2P" id="oratorName2P">
+                    <p>mówca 3</p><input type="text" name="oratorName3P" id="oratorName3P">
+                    <p>mówca 4 </p><input type="text" name="oratorName4P" id="oratorName4P">
+                </div>
+                <div class="oposition-data details">
+                    <h4>opozycja</h4>
+                    <p>mówca 1</p><input type="text" name="oratorName1O" id="oratorName1O">
+                    <p>mówca 2</p><input type="text" name="oratorName2O" id="oratorName2O">
+                    <p>mówca 3</p><input type="text" name="oratorName3O" id="oratorName3O">
+                    <p>mówca 4 </p><input type="text" name="oratorName4O" id="oratorName4O">
+                </div>
+            </div>
+        </section>
+
+
+        <button class="primary-btn" id="toDebateRounds">Zatwierdź dane i przejdź do debaty</button>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- EKRAN NR 2 - RUNDY DEBATY I OCENA ZAWODNIKÓW -->
+    <section class="debate-rounds">
+        <br><br>
+        <h2 id="thesis-place">W TYM MIEJSCU WYŚWIETLI SIĘ WPROWADZONA PRZEZ CIEBIE TEZA</h2>
+
+        <section class="rounds">
+            <div class="round firstRound">
+                <h2 class="round-header">runda I</h2>
+                <div class="competitors">
+                    <div class="proposition_member">
+                        <h3>propozycja</h3>
+                        <h5>mówca 1</h5>
+                        <h6 id="pm1"></h6>
+                        <label for="proposition_member_1_retoryka">retoryka</label>
+                        <select id="proposition_member_1_retoryka" name="proposition_member_1_retoryka">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <label for="proposition_member_1_struktura">struktura</label>
+                        <select id="proposition_member_1_struktura" name="proposition_member_1_struktura">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <label for="proposition_member_1_merytoryka">merytoryka</label>
+                        <select id="proposition_member_1_merytoryka" name="proposition_member_1_merytoryka">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <label for="proposition_member_1_pytania">pytania</label>
+                        <select id="proposition_member_1_pytania" name="proposition_member_1_pytania">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                        <label for="proposition_member_1_rola">rola</label>
+                        <select id="proposition_member_1_rola" name="proposition_member_1_rola">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+                    <div class="oposition_member">
+                        <h3>opozycja</h3>
+                        <h5>mówca 1</h5>
+                        <h6 id="om1"></h6>
+                        <label for="oposition_member_1_retoryka">retoryka</label>
+                        <select id="oposition_member_1_retoryka" name="oposition_member_1_retoryka">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <label for="oposition_member_1_struktura">struktura</label>
+                        <select id="oposition_member_1_struktura" name="oposition_member_1_struktura">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <label for="oposition_member_1_merytoryka">merytoryka</label>
+                        <select id="oposition_member_1_merytoryka" name="oposition_member_1_merytoryka">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <label for="oposition_member_1_pytania">pytania</label>
+                        <select id="oposition_member_1_pytania" name="oposition_member_1_pytania">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                        <label for="oposition_member_1_rola">rola</label>
+                        <select id="oposition_member_1_rola" name="oposition_member_1_rola">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="round secondRound">
+                <h2 class="round-header">runda II</h2>
+                <div class="competitors">
+                    <div class="proposition_member">
+                        <h3>propozycja</h3>
+                        <h5>mówca 2</h5>
+                        <h6 id="pm2"></h6>
+                        <label for="proposition_member_2_retoryka">retoryka</label>
+                        <select id="proposition_member_2_retoryka" name="proposition_member_2_retoryka">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <label for="proposition_member_2_struktura">struktura</label>
+                        <select id="proposition_member_2_struktura" name="proposition_member_2_struktura">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <label for="proposition_member_2_merytoryka">merytoryka</label>
+                        <select id="proposition_member_2_merytoryka" name="proposition_member_2_merytoryka">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <label for="proposition_member_2_pytania">pytania</label>
+                        <select id="proposition_member_2_pytania" name="proposition_member_2_pytania">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                        <label for="proposition_member_2_rola">rola</label>
+                        <select id="proposition_member_2_rola" name="proposition_member_2_rola">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+                    <div class="oposition_member">
+                        <h3>opozycja</h3>
+                        <h5>mówca 2</h5>
+                        <h6 id="om2"></h6>
+                        <label for="oposition_member_2_retoryka">retoryka</label>
+                        <select id="oposition_member_2_retoryka" name="oposition_member_2_retoryka">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <label for="oposition_member_2_struktura">struktura</label>
+                        <select id="oposition_member_2_struktura" name="oposition_member_2_struktura">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <label for="oposition_member_2_merytoryka">merytoryka</label>
+                        <select id="oposition_member_2_merytoryka" name="oposition_member_2_merytoryka">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <label for="oposition_member_2_pytania">pytania</label>
+                        <select id="oposition_member_2_pytania" name="oposition_member_2_pytania">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                        <label for="oposition_member_2_rola">rola</label>
+                        <select id="oposition_member_2_rola" name="oposition_member_2_rola">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="round thirdRound">
+                <h2 class="round-header">runda III</h2>
+                <div class="competitors">
+                    <div class="proposition_member">
+                        <h3>propozycja</h3>
+                        <h5>mówca 3</h5>
+                        <h6 id="pm3"></h6>
+                        <label for="proposition_member_3_retoryka">retoryka</label>
+                        <select id="proposition_member_3_retoryka" name="proposition_member_3_retoryka">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <label for="proposition_member_3_struktura">struktura</label>
+                        <select id="proposition_member_3_struktura" name="proposition_member_3_struktura">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <label for="proposition_member_3_merytoryka">merytoryka</label>
+                        <select id="proposition_member_3_merytoryka" name="proposition_member_3_merytoryka">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <label for="proposition_member_3_pytania">pytania</label>
+                        <select id="proposition_member_3_pytania" name="proposition_member_3_pytania">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                        <label for="proposition_member_3_rola">rola</label>
+                        <select id="proposition_member_3_rola" name="proposition_member_3_rola">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+                    <div class="oposition_member">
+                        <h3>opozycja</h3>
+                        <h5>mówca 3</h5>
+                        <h6 id="om3"></h6>
+                        <label for="oposition_member_3_retoryka">retoryka</label>
+                        <select id="oposition_member_3_retoryka" name="oposition_member_3_retoryka">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <label for="oposition_member_3_struktura">struktura</label>
+                        <select id="oposition_member_3_struktura" name="oposition_member_3_struktura">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <label for="oposition_member_3_merytoryka">merytoryka</label>
+                        <select id="oposition_member_3_merytoryka" name="oposition_member_3_merytoryka">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <label for="oposition_member_3_pytania">pytania</label>
+                        <select id="oposition_member_3_pytania" name="oposition_member_3_pytania">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                        <label for="oposition_member_3_rola">rola</label>
+                        <select id="oposition_member_3_rola" name="oposition_member_3_rola">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="round fourthRound">
+                <h2 class="round-header">runda IV</h2>
+                <div class="competitors">
+                    <div class="proposition_member">
+                        <h3>propozycja</h3>
+                        <h5>mówca 4</h5>
+                        <h6 id="pm4"></h6>
+                        <label for="proposition_member_4_retoryka">retoryka</label>
+                        <select id="proposition_member_4_retoryka" name="proposition_member_4_retoryka">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <label for="proposition_member_4_struktura">struktura</label>
+                        <select id="proposition_member_4_struktura" name="proposition_member_4_struktura">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <label for="proposition_member_4_merytoryka">merytoryka</label>
+                        <select id="proposition_member_4_merytoryka" name="proposition_member_4_merytoryka">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <label for="proposition_member_4_pytania">pytania</label>
+                        <select id="proposition_member_4_pytania" name="proposition_member_4_pytania">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                        <label for="proposition_member_4_rola">rola</label>
+                        <select id="proposition_member_4_rola" name="proposition_member_4_rola">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+                    <div class="oposition_member">
+                        <h3>opozycja</h3>
+                        <h5>mówca 4</h5>
+                        <h6 id="om4"></h6>
+                        <label for="oposition_member_4_retoryka">retoryka</label>
+                        <select id="oposition_member_4_retoryka" name="oposition_member_4_retoryka">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <label for="oposition_member_4_struktura">struktura</label>
+                        <select id="oposition_member_4_struktura" name="oposition_member_4_struktura">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <label for="oposition_member_4_merytoryka">merytoryka</label>
+                        <select id="oposition_member_4_merytoryka" name="oposition_member_4_merytoryka">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <label for="oposition_member_4_pytania">pytania</label>
+                        <select id="oposition_member_4_pytania" name="oposition_member_4_pytania">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                        <label for="oposition_member_4_rola">rola</label>
+                        <select id="oposition_member_4_rola" name="oposition_member_4_rola">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="control">
+            <button class="primary-btn" id="debate-rounds-back-btn">wstecz</button>
+            <button class="primary-btn" id="debate-rounds-forward-btn">dalej</button>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- EKRAN NR 3 - OCENA ZESPOŁÓW I PUNKTY SĘDZIOWSKIE -->
+    <section class="summary-view">
+        <!-- <br><br> -->
+        <!-- <h2>podstrona z oceną zespołów</h2> -->
+
+        <section class="rating">
+            <!-- PROPOSITION -->
+            <div class="proposition">
+                <h4>propozycja</h4>
+                <div class="orator1P orator">
+                    <label for="orator1P" id="oratorName1Pshow">mówca 1</label>
+                    <input disabled type="text" id="orator1P">
+                </div>
+                <div class="orator2P orator">
+                    <label for="orator2P" id="oratorName2Pshow">mówca 2</label>
+                    <input disabled type="text" id="orator2P">
+    
+                </div>
+                <div class="orator3P orator">
+                    <label for="orator3P" id="oratorName3Pshow">mówca 3</label>
+                    <input disabled type="text" id="orator3P">
+    
+                </div>
+                <div class="orator4P orator">
+                    <label for="orator4P" id="oratorName4Pshow">mówca 4</label>
+                    <input disabled type="text" id="orator4P">
+    
+                </div>
+    
+    
+                <div class="sdP">
+                    <label for="sdP">spójność drużyny</label>
+                    <select id="sdP" name="sdP">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+    
+                <div class="dlsP">
+                    <label for="dlsP">definiowanie linii sporu</label>
+                    <select id="dlsP" name="dlsP">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+    
+                <div class="laP">
+                    <label for="laP">linia argumentacyjna</label>
+                    <select id="laP" name="laP">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                    </select>
+                </div>
+    
+                <div class="kP">
+                    <label for="kP">kontrargumentacja</label>
+                    <select id="kP" name="kP">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                    </select>
+                </div>
+    
+                <div class="psP">
+                    <label for="psP">punkty sędziowskie</label>
+                    <select id="psP" name="psP">
+                        <option value="-5">-5</option>
+                        <option value="-4">-4</option>
+                        <option value="-3">-3</option>
+                        <option value="-2">-2</option>
+                        <option value="-1">-1</option>
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+    
+                <div class="yourSumP">twoja suma wynosi: <span class="yourSumPshow" id="yourSumPshow"></span></div>
+                <button class="second-btn" id="yourPropositionSum">OBLICZ SUMĘ</button>
+                <br>
+                <div class="s1P">
+                    <label for="s1P">sędzia 1</label>
+                    <input type="number" id="proposition-judge-1" value="0">
+                </div>
+                <div class="s2P">
+                    <label for="s2P">sędzia 2</label>
+                    <input type="number" id="proposition-judge-2" value="0">
+                </div>
+    
+                <div class="sumP">WYNIK KOŃCOWY WYNOSI: <span class="sumPshow" id="proposition-total"></span></div>
+                <button class="second-btn" id="proposition-total-btn">OBLICZ WYNIK</button>
+            </div>
+    
+    
+            <!-- OPOSITION -->
+            <div class="oposition">
+                <h4>opozycja</h4>
+    
+                <div class="orator1O orator">
+                    <label for="orator1O" id="oratorName1Oshow">mówca 1</label>
+                    <input disabled type="text" id="orator1O">
+                </div>
+                <div class="orator2O orator">
+                    <label for="orator2O" id="oratorName2Oshow">mówca 2</label>
+                    <input disabled type="text" id="orator2O">
+                </div>
+                <div class="orator3O orator">
+                    <label for="orator3O" id="oratorName3Oshow">mówca 3</label>
+                    <input disabled type="text" id="orator3O">
+                </div>
+                <div class="orator4O orator">
+                    <label for="orator4O" id="oratorName4Oshow">mówca 4</label>
+                    <input disabled type="text" id="orator4O">
+                </div>
+    
+    
+                <div class="sdO">
+                    <label for="sdO">spójność drużyny</label>
+                    <select id="sdO" name="sdO">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+    
+                <div class="dlsO">
+                    <label for="dlsO">definiowanie linii sporu</label>
+                    <select id="dlsO" name="dlsO">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+    
+                <div class="laO">
+                    <label for="laO">linia argumentacyjna</label>
+                    <select id="laO" name="laO">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                    </select>
+                </div>
+    
+                <div class="kO">
+                    <label for="kO">kontrargumentacja</label>
+                    <select id="kO" name="kO">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                    </select>
+                </div>
+    
+                <div class="psO">
+                    <label for="psO">punkty sędziowskie</label>
+                    <select id="psO" name="psO">
+                        <option value="-5">-5</option>
+                        <option value="-4">-4</option>
+                        <option value="-3">-3</option>
+                        <option value="-2">-2</option>
+                        <option value="-1">-1</option>
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="yourSumO">twoja suma wynosi: <span class="yourSumOshow" id="yourSumOshow"></span></div>
+                <button class="second-btn" id="yourOpositionSum">oblicz sumę</button>
+                <br>
+                <div class="s1O">
+                    <label for="s1O">sędzia 1</label>
+                    <input type="number" id="oposition-judge-1" value="0">
+                </div>
+                <div class="s2O">
+                    <label for="s2O">sędzia 2</label>
+                    <input type="number" id="oposition-judge-2" value="0">
+                </div>
+                <div class="sumO">WYNIK KOŃCOWY WYNOSI: <span class="sumOshow" id="oposition-total"></span></div>
+                <button class="second-btn" id="oposition-total-btn">OBLICZ WYNIK</button>
+    
+            </div>
+    
+        </section>
+
+
+
+
+        <div class="control">
+            <button class="primary-btn" id="summary-view-back-btn">wstecz</button>
+            <button class="accent-btn" id="summary-view-btn">ZAKOŃCZ</button>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- EKRAN NR 4 - PODSUMOWANIE DEBATY I EKRAN KOŃCOWY -->
+    <div class="ending-page">
+        <a href="#" class="restart-btn"><i class="fas fa-undo-alt"></i></a>
+        <p class="ending-paragraph" id="ending-paragraph"></p>
+        <br><br><br>
+        <h1>DEBATA Pro</h1>
+    </div>
+
+
+
+
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./debata.js"></script>
+</body>
+
+</html>

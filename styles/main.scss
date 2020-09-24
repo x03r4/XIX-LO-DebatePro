@@ -1,0 +1,154 @@
+@use './footer.scss';
+@use './nav.scss';
+@use './team.scss';
+@use './about.scss';
+@use './debata.scss';
+
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: $blue;
+  background-color: $debateLightBlue;
+  color: $white;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3em auto 5em;
+  text-transform: uppercase;
+  img {
+    width: 15vh;
+    filter: brightness(80%);
+    margin: 0 0 1em 0;
+  }
+  .title {
+    h1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-weight: 900;
+      letter-spacing: 4px;
+      font-size: 2em;
+      span {
+        color: $gray;
+      }
+    }
+  }
+  .subtitle {
+    padding: 1em 0 0 0;
+    margin: 3em auto;
+    border-top: 1px solid #c4c4c48a;
+    text-align: center;
+    h2 {
+      font-weight: 300;
+      letter-spacing: 8px;
+      span {
+        letter-spacing: initial;
+      }
+    }
+  }
+}
+.new-season {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  color: $blue;
+  text-transform: uppercase;
+  padding: auto 2em;
+  letter-spacing: 4px;
+  h3 {
+    padding: 3em 1em;
+    font-weight: 900;
+    text-align: center;
+  }
+  p {
+    font-weight: 500;
+    padding: 0 0 3em;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+  }
+}
+.info {
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3em auto;
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+      margin: 3em auto 1em;
+      font-size: 1.2em;
+      font-weight: 900;
+      letter-spacing: 6px;
+    }
+    p {
+      padding: 1em;
+      text-align: justify;
+      line-height: 2em;
+    }
+  }
+}
+.hall {
+  background-image: url(/img/hall.svg);
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  height: 200px;
+  margin: 4em 0 2em;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 10%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.scene_element {
+  animation-duration: 0.5s;
+  transition-timing-function: ease-in;
+  animation-fill-mode: both;
+}
+.scene_element--fadein {
+  animation-name: fadeIn;
+}
+
+.scene_element--fadeinup {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-delay: .15s;
+}
+.scene_element--fadeinup2 {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-delay: .2s;
+}
+.scene_element--fadeinup3 {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-delay: .35s;
+}
