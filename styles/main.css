@@ -172,8 +172,9 @@ nav ul a {
   align-items: center;
 }
 .graph img {
-  margin: 3em auto;
+  margin: 6em auto;
   width: 80%;
+  max-width: 500px;
 }
 
 .materials {
