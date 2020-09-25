@@ -76,7 +76,7 @@ nav ul a {
 @media screen and (min-width: 700px) {
   nav img {
     display: block;
-    width: 60px;
+    width: 50px;
     filter: brightness(120%);
     margin: 0 0 0 20px;
   }
