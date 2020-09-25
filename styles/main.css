@@ -32,9 +32,12 @@ footer p a {
 
 nav {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   box-shadow: 0 2px 10px -2px #0b2c3d6c;
+}
+nav img {
+  display: none;
 }
 nav ul {
   width: 100%;
@@ -70,6 +73,22 @@ nav ul a {
   font-weight: 700;
 }
 
+@media screen and (min-width: 700px) {
+  nav img {
+    display: block;
+    width: 60px;
+    filter: brightness(120%);
+    margin: 0 0 0 20px;
+  }
+  nav ul {
+    padding: 0 40px 0 0;
+    justify-content: flex-end;
+  }
+  nav ul li {
+    margin: auto 10px;
+    font-size: 20px;
+  }
+}
 .team {
   display: flex;
   flex-direction: column;
@@ -843,6 +862,49 @@ main .subtitle h2 span {
   animation-name: fadeInUp;
   animation-duration: 1s;
   animation-delay: 0.35s;
+}
+
+@media screen and (min-width: 700px) {
+  main .title {
+    margin-top: 80px;
+  }
+  main .title h1 {
+    flex-direction: row;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 6em;
+    font-size: 7vw;
+    letter-spacing: 6px;
+    color: #02507a;
+    -webkit-text-stroke: 2px #f2f2f2;
+  }
+  main .title h1 span {
+    -webkit-text-stroke: 0px;
+    color: #02507a;
+    color: #f2f2f2;
+    text-shadow: none;
+  }
+  main .subtitle {
+    width: 40%;
+    border-top: 1px solid #c4c4c48a;
+    font-size: 2em;
+    font-size: 1vw;
+    font-weight: 500;
+    letter-spacing: 18px;
+    text-transform: uppercase;
+    padding: 1em;
+    margin: 3em 0;
+    text-align: center;
+    display: flex;
+    width: 60%;
+  }
+  main span {
+    letter-spacing: initial;
+  }
+
+  img {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

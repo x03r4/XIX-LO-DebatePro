@@ -140,15 +140,62 @@ main {
 .scene_element--fadeinup {
   animation-name: fadeInUp;
   animation-duration: 1s;
-  animation-delay: .15s;
+  animation-delay: 0.15s;
 }
 .scene_element--fadeinup2 {
   animation-name: fadeInUp;
   animation-duration: 1s;
-  animation-delay: .2s;
+  animation-delay: 0.2s;
 }
 .scene_element--fadeinup3 {
   animation-name: fadeInUp;
   animation-duration: 1s;
-  animation-delay: .35s;
+  animation-delay: 0.35s;
+}
+
+@media screen and (min-width: 700px) {
+  main {
+    .title {
+      margin-top: 80px;
+      h1 {
+        flex-direction: row;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 6em;
+        font-size: 7vw;
+        letter-spacing: 6px;
+        color: $debateLightBlue;
+        -webkit-text-stroke: 2px #f2f2f2;
+        // text-shadow: 5px 5px 0px hsla(0, 0%, 95%, 0.3);
+        span {
+          -webkit-text-stroke: 0px;
+          color: $debateLightBlue;
+          color: $white;
+          text-shadow: none;
+        }
+      }
+    }
+    .subtitle {
+      width: 40%;
+      border-top: 1px solid #c4c4c48a;
+      font-size: 2em;
+      font-size: 1vw;
+      font-weight: 500;
+      letter-spacing: 18px;
+      text-transform: uppercase;
+
+      padding: 1em;
+      margin: 3em 0;
+      text-align: center;
+      display: flex;
+      width: 60%;
+    }
+    span {
+      letter-spacing: initial;
+      
+    }
+  }
+  img {
+    display: none;
+  }
 }
