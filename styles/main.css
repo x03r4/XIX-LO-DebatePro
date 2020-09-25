@@ -865,6 +865,9 @@ main .subtitle h2 span {
 }
 
 @media screen and (min-width: 700px) {
+  main img {
+    display: none;
+  }
   main .title {
     margin-top: 80px;
   }
@@ -900,10 +903,6 @@ main .subtitle h2 span {
   }
   main span {
     letter-spacing: initial;
-  }
-
-  img {
-    display: none;
   }
 }
 
