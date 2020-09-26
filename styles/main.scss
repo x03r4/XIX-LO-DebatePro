@@ -155,7 +155,7 @@ main {
 
 @media screen and (min-width: 700px) {
   main {
-    img  {
+    img {
       display: none;
     }
     .title {
@@ -195,7 +195,24 @@ main {
     }
     span {
       letter-spacing: initial;
-      
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .info {
+    article {
+      flex-direction: row;
+      width: 70%;
+      h2 {
+        margin: auto 30px auto 30px;
+      }
+      p {
+        padding: 2em 1em 0;
+      }
+    }
+    .reverse {
+      flex-direction: row-reverse;
     }
   }
 }
