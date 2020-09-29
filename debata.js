@@ -24,6 +24,7 @@ hideLoadScreen = () => {
 $("#toDebateRounds").click(() => {
   $(".prepare-data").removeClass("showMe");
   $(".debate-rounds").addClass("showMe");
+  $(window).scrollTop(0);
 });
 
 //CHOWA EKRAN NR 2 I POKAZUJE EKRAN NR 3
@@ -31,14 +32,16 @@ $("#debate-rounds-forward-btn").click(() => {
   $(".debate-rounds").removeClass("showMe");
   $(".summary-view").addClass("showMe");
   setTimeout(() => {
+    $(window).scrollTop(0);
     $(".summary-view").css("opacity", "1");
-  }, 1000);
+}, 1000);
 });
 
 //CHOWA EKRAN NR 3 I POKAZUJE EKRAN NR 4
 $("#summary-view-btn").click(() => {
     $(".summary-view").css("opacity", "0");
-  $(".summary-view").removeClass("showMe");
+    $(".summary-view").removeClass("showMe");
+    $(window).scrollTop(0);
   $(".ending-page").addClass("showMe");
 })
 
@@ -114,16 +117,20 @@ $("#toDebateRounds").click(() => {
     
     //przekazuje tezę na EKRAN DRUGI
     //tak trzeba będzie zabezpieczyć niewypełnienie pierwszego ekranu
-    if (thesis.val() === "" || $("input[name=competition-stage]:checked").val() == undefined
-     || propositionMember1Name.val() === "" || propositionMember2Name.val() === "" || propositionMember3Name.val() === "" || propositionMember4Name.val() === ""
-     || opositionMember1Name.val() === ""  || opositionMember2Name.val() === "" || opositionMember3Name.val() === "" || opositionMember4Name.val() === "")
-      {
-        alert(`Aby przejść dalej zupełnij wszystkie pola`);
-        $(".debate-rounds").removeClass("showMe");
-        $(".prepare-data").addClass("showMe");
-    } else {
-        $("#thesis-place").html(`${thesis.val()}`);
-    }
+    // if (thesis.val() === "" || $("input[name=competition-stage]:checked").val() == undefined
+    //  || propositionMember1Name.val() === "" || propositionMember2Name.val() === "" || propositionMember3Name.val() === "" || propositionMember4Name.val() === ""
+    //  || opositionMember1Name.val() === ""  || opositionMember2Name.val() === "" || opositionMember3Name.val() === "" || opositionMember4Name.val() === "")
+    //   {
+    //     alert(`Aby przejść dalej zupełnij wszystkie pola`);
+    //     $(".debate-rounds").removeClass("showMe");
+    //     $(".prepare-data").addClass("showMe");
+    // } else {
+    //     $("#thesis-place").html(`${thesis.val()}`);
+    // }
+
+
+
+
     // if ($("input[name=competition-stage]:!checked")) {
     //     alert(`wybierz etap rozgrywek`);
     //     $(".debate-rounds").removeClass("showMe");

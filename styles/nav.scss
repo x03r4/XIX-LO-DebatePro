@@ -46,6 +46,10 @@ nav {
   border-bottom: 1px solid $white;
   font-weight: 700;
 }
+.disabled-link {
+  cursor: not-allowed;
+  color: $transparentGray;
+}
 
 @media screen and (min-width: 700px) {
   nav {

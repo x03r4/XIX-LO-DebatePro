@@ -75,6 +75,11 @@ nav ul a {
   font-weight: 700;
 }
 
+.disabled-link {
+  cursor: not-allowed;
+  color: #c4c4c498;
+}
+
 @media screen and (min-width: 700px) {
   nav img {
     display: block;
