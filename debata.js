@@ -445,7 +445,7 @@ $("#summary-view-btn").click(() => {
         $("#ending-paragraph").html(`Pochylając się nad tezą <br>
             "${thesis}"<br>
             w ${stage} rozgrywek Ligi Debadanckiej XIX LO<br>
-            wynikiem ${propositionTeamTotalPoints}:${opositionTeamTotalPoints} <br>
+            wynikiem ${propositionTeamTotalPoints} : ${opositionTeamTotalPoints} <br>
             wygrywa PROPOZYCJA w składzie <br>
             ${propositionMember1Name}, ${propositionMember2Name}, ${propositionMember3Name}, ${propositionMember4Name} <br>
             SERDECZNIE GRATULUJEMY!`);
@@ -453,7 +453,7 @@ $("#summary-view-btn").click(() => {
         $("#ending-paragraph").html(`Pochylając się nad tezą <br>
             "${thesis}"<br>
             w ${stage} rozgrywek Ligi Debadanckiej XIX LO<br>
-            wynikiem ${propositionTeamTotalPoints}:${opositionTeamTotalPoints} <br>
+            wynikiem ${propositionTeamTotalPoints} : ${opositionTeamTotalPoints} <br>
             wygrywa OPOZYCJA w składzie <br>
             ${opositionMember1Name}, ${opositionMember2Name}, ${opositionMember3Name}, ${opositionMember4Name} <br>
             SERDECZNIE GRATULUJEMY!`);
@@ -461,7 +461,7 @@ $("#summary-view-btn").click(() => {
         $("#ending-paragraph").html(`Pochylając się nad tezą <br>
             "${thesis}"<br>
             w ${stage} rozgrywek Ligi Debadanckiej XIX LO<br>
-            wynikiem ${propositionTeamTotalPoints}:${opositionTeamTotalPoints} <br>
+            wynikiem ${propositionTeamTotalPoints} : ${opositionTeamTotalPoints} <br>
             OPOZYCJA w składzie <br>
             ${opositionMember1Name}, ${opositionMember2Name}, ${opositionMember3Name}, ${opositionMember4Name} <br>
             remisuje z PROPOZYCJą w składzie <br>

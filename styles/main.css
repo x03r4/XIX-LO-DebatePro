@@ -774,19 +774,27 @@ main .title h1 {
   font-weight: 900;
   letter-spacing: 4px;
   font-size: 2em;
+  -webkit-text-stroke: 2px goldenrod;
+  color: #02507a;
 }
 main .title h1 span {
   color: #c4c4c4;
+  -webkit-text-stroke: 0px;
+  color: #02507a;
+  color: #f2f2f2;
+  text-shadow: none;
 }
 main .subtitle {
   padding: 1em 0 0 0;
   margin: 3em auto;
   border-top: 1px solid #c4c4c48a;
+  border-top: 1px solid rgba(218, 165, 32, 0.54);
   text-align: center;
 }
 main .subtitle h2 {
   font-weight: 300;
   letter-spacing: 8px;
+  color: #c4c4c4;
 }
 main .subtitle h2 span {
   letter-spacing: initial;
@@ -897,6 +905,7 @@ main .subtitle h2 span {
   }
   main .title {
     margin-top: 80px;
+    width: 60%;
   }
   main .title h1 {
     flex-direction: row;
@@ -904,6 +913,7 @@ main .subtitle h2 span {
     font-weight: 900;
     font-size: 6em;
     font-size: 7vw;
+    font-size: 5vw;
     letter-spacing: 6px;
     color: #02507a;
     -webkit-text-stroke: 2px #f2f2f2;
@@ -948,6 +958,26 @@ main .subtitle h2 span {
   .info .reverse {
     flex-direction: row-reverse;
   }
+}
+.watermark {
+  position: absolute;
+  z-index: 10;
+  width: 400px;
+  height: 400px;
+  top: 55%;
+  left: 60%;
+  perspective: 185px;
+  transform: scale(1.5) translate(0%, -50%) perspective(285px) rotateX(7deg) rotateY(-28deg) rotateZ(6deg);
+  opacity: 5%;
+  display: none;
+}
+
+.debata-pro {
+  border-radius: 3px;
+  color: gold;
+  border: 1px dashed goldenrod;
+  padding: 4px 15px;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=main.css.map */
